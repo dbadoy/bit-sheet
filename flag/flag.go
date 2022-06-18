@@ -31,4 +31,15 @@ func main() {
 	fmt.Println(C_FLAG_SHIFT)
 	fmt.Println(D_FLAG_SHIFT)
 	fmt.Println(E_FLAG_SHIFT)
+	
+	A_FLAG_CHECKER := func(v int) bool {
+		return (v & A_FLAG) > 0
+	}
+
+	// true
+	fmt.Println(A_FLAG_CHECKER(A_FLAG))
+	// true
+	fmt.Println(A_FLAG_CHECKER(A_FLAG_SHIFT))
+	// false
+	fmt.Println(A_FLAG_CHECKER(E_FLAG))
 }
